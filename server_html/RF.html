@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style id="plotly.js-style-global"></style>
+    <style id="plotly.js-style-modebar-9f5d50"></style>
+</head>
+<body class="vsc-initialized">
+
+<div align="center">
+<form action=/dashboard>
+<div>
+<div>
+  <input id="n_est" type="number" name="n_estimators" value="{{ default_est }}">
+  <label for="n_est">Количество деревьев</label>
+  <br>
+  <input id="n_feat" type="number" name="feature_subsample_size" value="{{ default_feat }}">
+  <label for="n_feat">Размерность подвыборки признакового пространства</label>
+  <br>
+  <input id="max_dep" type="number" name="max_depth" value="{{ default_dep }}">
+  <label for="max_dep">Максимальная глубина дерева</label>
+  
+</div>
+
+<p></p>
+
+<form method="post" action="{{ url_for('file') }}">
+    <button type="file">Загрузить обучающую выборку (csv-файл)</button>
+</form>
+
+
+</body>
+</html>
