@@ -1,0 +1,12 @@
+numpy
+scikit-learn
+pandas
+scipy
+<<<<<<< HEAD
+=======
+time
+>>>>>>> 329443628f0902ee0ff517b4960370e0a58419b6
+
+wtforms
+flask_wtf
+flask_bootstrap
