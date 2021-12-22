@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+<h3>Введите номер модели, с которой хотите продолжить работу. Номер можно уточнить в списке созданных моделей.</h3>
+<div>
+<div align="center">
+<div class="container">
+      {{ wtf.quick_form(form) }}
+</div>
+
+ <body>
+      <font color="red">
+      {% for mesg in get_flashed_messages() %}
+      <h3>{{ mesg }}</h3>
+      {% endfor %}
+</body>
+
+<a href="{{ url_for('information') }}">Посмотреть информацию о созданных моделях</a>
+<br>
+<a href="{{ url_for('prepare_model') }}">Создать еще одну модель</a>
+{% endblock %}

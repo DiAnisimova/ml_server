@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div align="center">
+<div>
+<h3>Давайте создадим модель! Выберите параметры:</h3>
+<div>
+<div class="container">
+      {{ wtf.quick_form(form) }}
+</div>
+ <body>
+      <font color="red">
+      {% for mesg in get_flashed_messages() %}
+      <h3>{{ mesg }}</h3>
+      {% endfor %}
+</body>
+<a href="{{ url_for('information') }}">Посмотреть информацию о созданных моделях</a>
+{% endblock %}
